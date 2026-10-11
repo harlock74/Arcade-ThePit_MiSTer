@@ -1,0 +1,11 @@
+# Generated Quartus output (source, IP and releases remain tracked).
+/db/
+/incremental_db/
+/output_files/
+/greybox_tmp/
+/hc_output/
+/.qsys_edit/
+/hps_isw_handoff/
+*.qws
+.DS_Store
+._*

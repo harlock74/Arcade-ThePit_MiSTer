@@ -18,7 +18,7 @@ The core implements the original game's video, audio, controls and high-score pe
 
 ## Installation
 
-1. Copy `releases/ThePit_20260929.rbf` to `/_Arcade/cores/`.
+1. Copy `releases/Arcade-ThePit_20260929.rbf` to `/_Arcade/cores/` as `ThePit_20260929.rbf`. The official Distribution installer removes the `Arcade-` prefix.
 2. Copy `releases/The Pit (US set 1).mra` to `/_Arcade/`.
 3. Supply your legally obtained `thepitu1.zip` in `/games/mame/` and launch the MRA.
 
@@ -98,7 +98,7 @@ The supplied release RBF is the previously tested build. A newly compiled RBF sh
 
 **Release SHA-256:**
 
-`ThePit_20260929.rbf`
+`Arcade-ThePit_20260929.rbf`
 
 `85a95a4ba5813f8bdd95b7de392d59aa6b835ad1ecf72f2aa97a85537879f107`
 
