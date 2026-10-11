@@ -1,0 +1,9 @@
+# Scoped project-owner licence grant
+
+The project owner has selected **GNU General Public License, version 3 or (at your option) any later version** (`GPL-3.0-or-later`) for copyrightable original game-core contributions that explicitly carry that SPDX identifier, and for copyrightable owner-controlled edits to inherited files to the extent those edits are identified by project history. The complete GPLv3 text is in `LICENSES/GPL-3.0.txt`.
+
+This is a scoped grant, not a claim to own or relicense an entire mixed-provenance repository. It covers original game-board, memory, video, audio, control, loader and high-score implementation expression under `rtl/` that bears `SPDX-License-Identifier: GPL-3.0-or-later`, and only demonstrated owner-controlled expression in mixed integration files. It does not claim ownership of inherited interfaces or upstream portions merely because they occur in a locally modified file.
+
+No owner licence is applied to the MiSTer framework under `sys/`, Intel/Altera generated or derived IP, T80, JT49, inherited top-wrapper text, original licence texts, game ROMs, MAME source, or other third-party material. Those components retain their original terms and notices. `NOTICE.md` and retained source headers document component attribution, applicable notices and remaining interpretation limits.
+
+The owner also selects `GPL-3.0-or-later` for copyrightable original contributions they control in project documentation, tests, scripts, packaging support, MRA metadata and authored configuration portions. This grant reaches only demonstrated owner-controlled expression. Facts, generated output, inherited configuration fragments and uncertain or third-party portions are not treated as wholly owner-authored and retain their applicable status or terms. This statement grants no exception to third-party copyleft or Intel conditions and does not claim guaranteed legal clearance.

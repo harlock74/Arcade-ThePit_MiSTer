@@ -1,0 +1,45 @@
+set_global_assignment -name SYSTEMVERILOG_FILE ThePit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_reset.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_controls.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_loader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_rom_store.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_board.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_raster.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_background.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sprite_line_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sprite_evaluator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sprite_video.sv
+set_global_assignment -name SDC_FILE ThePit.sdc
+# Stage J uses two T80s and qualified AY adapters with restricted tone engines.
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80_Pack.vhd
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80_Reg.vhd
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80_ALU.vhd
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80_MCode.vhd
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80.vhd
+set_global_assignment -name VHDL_FILE rtl/vendor/T80/T80pa.vhd
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_bus.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_cen.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_div.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_eg.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_exp.v
+set_global_assignment -name VERILOG_FILE rtl/vendor/jt49/jt49_noise.v
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_mainbus.sv
+set_global_assignment -name VHDL_FILE rtl/thepit_maincpu.vhd
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_video_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_object_ram.sv
+set_global_assignment -name MIF_FILE rtl/thepit_ram_zero.mif
+set_global_assignment -name MIF_FILE rtl/thepit_object_zero.mif
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_tone.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_ay.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sound_bus.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sound_clocks.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_sound_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_audio_cdc.sv
+set_global_assignment -name VHDL_FILE rtl/thepit_soundcpu.vhd
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_hiscore_packet.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_hiscore_manager.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/thepit_hiscore.sv

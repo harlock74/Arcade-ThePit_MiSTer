@@ -1,0 +1,8 @@
+-- Synthetic configuration zeros, not game-ROM data.
+WIDTH=8;
+DEPTH=1024;
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+CONTENT BEGIN
+ [000..3FF] : 00;
+END;
