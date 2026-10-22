@@ -6,9 +6,13 @@ FPGA implementation of **The Pit**, originally released by Centuri in 1982.
 
 Current status: functional behavioural implementation, mainly based on MAME/reference behaviour and available arcade hardware documentation.
 
-Long-term goal: progressively improve the core through visual audits of schematic sheets and move it closer to a schematic-aligned implementation where possible.
-
 The core implements the original game's video, audio, controls and high-score persistence.
+
+## How this core was developed
+
+This core was developed with the help of AI coding tools, which I used to write the code where my own experience fell short. Its current behaviour is largely based on MAME.
+
+I have compiled a netlist from the original The Pit manuals, and I am now refactoring the core against it one circuit at a time, so that it moves closer to the original hardware.
 
 ## Screenshots
 
