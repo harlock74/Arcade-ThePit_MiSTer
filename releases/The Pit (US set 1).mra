@@ -2,6 +2,7 @@
   <name>The Pit (US set 1)</name>
   <mameversion>0268</mameversion>
   <rbf>ThePit</rbf>
+  <rotation>vertical (cw)</rotation>
   <buttons names="Fire,Start 1P,Start 2P,Coin" default="A,Start,Select,R" />
   <rom index="0" zip="thepitu1.zip|thepit.zip" md5="56cad0a84bb00c856806709e6537011c">
     <part name="p38b.ic38" crc="7315e1bc" />
