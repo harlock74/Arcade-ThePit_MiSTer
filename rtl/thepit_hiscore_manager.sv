@@ -32,7 +32,8 @@ module thepit_hiscore_manager(
  reg [7:0] game_mode=0;
  reg [4:0] state=0;
  reg [3:0] pos=0;
- reg [9:0] budget=0;
+ // Preserve the approximately 40.96 us bus-transaction timeout at 36.864 MHz.
+ reg [10:0] budget=0;
  reg restoring=0;
  localparam IDLE=0,GRANT=1,DRAIN1=2,DRAIN2=3,BEGIN=4,
   READ1=5,READ2=6,READ3=7,READ4=8,WRITE1=9,WRITE2=10,WRITE3=11,
@@ -62,7 +63,7 @@ module thepit_hiscore_manager(
   end else begin
    if(state!=IDLE)begin
     budget<=budget+1'b1;
-    if(budget==1023)fault<=1;
+    if(budget==11'd1509)fault<=1;
    end else budget<=0;
    if(diagnostic)begin transaction<=0;initialized<=0;end
    if(!owns && busak_n)begin

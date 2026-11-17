@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Stage E bounded functional raster; see Docs/stage_e_timing_contract.md.
-// All state is clocked by the existing 25 MHz clock, never by pixel_ce.
+// All state is clocked by the 36.864 MHz system clock, never by pixel_ce.
 module thepit_raster (
  input wire clk, reset,
  output wire pixel_ce, frame_event,
@@ -8,24 +8,25 @@ module thepit_raster (
  output wire hblank, vblank, hs, vs, cs, de,
  output reg [7:0] red, green, blue
 );
- reg [11:0] accumulator=12'd0;
- assign pixel_ce=!reset && accumulator>=12'd2357;
+ reg [2:0] pixel_phase=3'd0;
+ assign pixel_ce=!reset && pixel_phase==3'd5;
  // Assert at the edge that advances into the first vertically blank line.
  assign frame_event=pixel_ce && x==9'd383 && y==9'd239;
  always @(posedge clk) begin
-  if(reset) begin accumulator<=12'd0; x<=9'd0; y<=9'd0; end
+  if(reset) begin pixel_phase<=3'd0; x<=9'd0; y<=9'd0; end
   else begin
    if(pixel_ce) begin
-    accumulator<=accumulator-12'd2357;
+    pixel_phase<=3'd0;
     if(x==9'd383) begin x<=9'd0; y<=y==9'd263 ? 9'd0 : y+9'd1; end
     else x<=x+9'd1;
-   end else accumulator<=accumulator+12'd768;
+   end else pixel_phase<=pixel_phase+1'b1;
   end
  end
  assign hblank=reset || x>=9'd256;
  assign vblank=reset || y<9'd16 || y>=9'd240;
  assign de=!(hblank || vblank);
- assign hs=reset || !(x>=9'd368);
+ // DOCUMENTED-APPROXIMATION: original PCB sync width/position/polarity UNRESOLVED (The Pit schematic PDF p.38, IC63, counters 60/59 and 62/61; edge timing not certified)
+ assign hs=reset || !(x>=9'd288 && x<9'd320);
  assign vs=reset || !(y>=9'd256);
  assign cs=hs && vs;
  // Diagnostic RGB is deliberately independent of ROM, palette and CPU state.

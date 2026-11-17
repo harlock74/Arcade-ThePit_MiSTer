@@ -3,7 +3,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 entity thepit_maincpu is
- generic(WATCHDOG_CYCLES:integer:=75000000;RAM_INIT_MODE:integer:=0);
+ generic(WATCHDOG_CYCLES:integer:=110592000;RAM_INIT_MODE:integer:=0);
  port(clk,reset:in std_logic;
       hs_busrq_n:in std_logic:='1';hs_owns:in std_logic:='0';
       hs_a:in std_logic_vector(15 downto 0):=(others=>'0');
@@ -33,7 +33,7 @@ entity thepit_maincpu is
 end;
 architecture rtl of thepit_maincpu is
  component thepit_mainbus is
- generic(WATCHDOG_CYCLES:integer:=75000000;RAM_INIT_MODE:integer:=0);
+ generic(WATCHDOG_CYCLES:integer:=110592000;RAM_INIT_MODE:integer:=0);
  port(clk,reset:in std_logic;a:in std_logic_vector(15 downto 0);dout:in std_logic_vector(7 downto 0);
  mreq_n,rd_n,wr_n,rfsh_n:in std_logic;rom_q:in std_logic_vector(7 downto 0);
  rom_req:out std_logic;rom_addr:out std_logic_vector(14 downto 0);din:out std_logic_vector(7 downto 0);

@@ -22,7 +22,7 @@ I have compiled a netlist from the original The Pit manuals, and I am now refact
 
 ## Installation
 
-1. Copy `releases/Arcade-ThePit_20261025.rbf` to `/_Arcade/cores/` as `ThePit_20261025.rbf`. The official Distribution installer removes the `Arcade-` prefix.
+1. Copy `releases/Arcade-ThePit_20261116.rbf` to `/_Arcade/cores/` as `ThePit_20261116.rbf`. The official Distribution installer removes the `Arcade-` prefix.
 2. Copy `releases/The Pit (US set 1).mra` to `/_Arcade/`.
 3. Supply your legally obtained `thepitu1.zip` in `/games/mame/` and launch the MRA.
 
@@ -102,9 +102,9 @@ The supplied release RBF is the previously tested build. A newly compiled RBF sh
 
 **Release SHA-256:**
 
-`Arcade-ThePit_20261025.rbf`
+`Arcade-ThePit_20261116.rbf`
 
-`2e9323c77f1310171c91fc8567a22dd0b0dd8e0513ba5c1482ad60486b73cc96`
+`09d6d8360873401f14b1e28902be38f1641fa32637c720c8c4f4a6f8c896ff99`
 
 **MRA SHA-256:**
 

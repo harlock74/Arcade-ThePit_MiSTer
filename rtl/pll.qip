@@ -1,4 +1,4 @@
-# Based on the pinned official template PLL, locally configured for 25 MHz.
+# Based on the pinned official template PLL, locally configured for 36.864 MHz.
 set_global_assignment -name IP_TOOL_NAME altera_pll -entity pll
 set_global_assignment -name IP_TOOL_VERSION 17.0 -entity pll
 set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) pll.v]

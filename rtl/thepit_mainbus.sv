@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Stage D MAME-functional CPU bus. No renderer or sound processor.
-module thepit_mainbus #(parameter integer WATCHDOG_CYCLES=75000000, parameter integer RAM_INIT_MODE=0)(
+module thepit_mainbus #(parameter integer WATCHDOG_CYCLES=110592000, parameter integer RAM_INIT_MODE=0)(
  input wire clk, reset,
  input wire [15:0] a,
  input wire [7:0] dout,
